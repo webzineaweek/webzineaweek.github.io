@@ -219,11 +219,75 @@ $(document).ready(function(){
 		};
 	});
 
-	$(function(){
-		$(".interview-list").draggable();
+	$('.X').click(function(){
+		$(this).parent().hide();
 	});
 
-	$(document).on('click', '#exhibitionmap', function() {
+// ************************mobile
+	function myFunction(x) {
+	if (x.matches) {
+		$(document).on('click', '#exhibitionmap', function() {
+		$('#interview-exhibitionmap').animate({scrollTop: 0});
+		$(this).attr('class', 'questions-visited');
+		$('#interview-exhibitionmap').show();
+	});
+
+	$(document).on('click', '#designGrammer', function() {
+		$('#interview-designGrammer').animate({scrollTop: 0});
+		$(this).attr('class', 'questions-visited');
+		$('#interview-designGrammer').show();
+		
+	});
+
+	$(document).on('click', '#record', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-record').show();
+		
+	});
+
+	$(document).on('click', '#volume', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-volume').show();
+		
+	});
+
+	$(document).on('click', '#name', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-name, #interview-instaName').show();
+		
+	});
+
+	$(document).on('click', '#work', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-work').show();
+		
+	});
+
+	$(document).on('click', '#newWork', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-thisSemesterWork, #interview-newwork').show();
+		
+	});
+
+	$(document).on('click', '#toy', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-toy').show();
+		
+	});
+
+	$(document).on('click', '#diary', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-diary').show();
+		
+	});
+
+	} else {
+
+		$(function(){
+		$(".interview-list").draggable();
+	});
+		
+		$(document).on('click', '#exhibitionmap', function() {
 		$('#interview-exhibitionmap').animate({scrollTop: 0});
 		$(this).attr('class', 'questions-visited');
 		$('#interview-exhibitionmap').show();
@@ -315,8 +379,11 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.X').click(function(){
-		$(this).parent().hide();
-	})
+  }
+}
+
+var x = window.matchMedia("(max-width: 600px)")
+myFunction(x)
+x.addListener(myFunction)
 
 });
