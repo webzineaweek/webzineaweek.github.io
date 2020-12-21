@@ -103,3 +103,9 @@ figcaption{
   margin: auto 2%;
   margin-top: .5rem;
 }
+
+@media screen and (max-width:600px){
+.interview-list{
+  font-size: 1rem;
+}  
+}
