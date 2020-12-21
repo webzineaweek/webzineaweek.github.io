@@ -314,7 +314,7 @@ a:link{
     top: 0;
     left: 0;
     width: 150%;
-    height: 150%;
+    height: 100%;
     word-break: keep-all;
     color: black;
     background-color: #39FF47;
@@ -353,7 +353,7 @@ a:link{
     top:0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 50%;
     z-index: 2;
   }
 
