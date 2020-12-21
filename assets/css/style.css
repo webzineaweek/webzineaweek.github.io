@@ -186,7 +186,7 @@ a:link{
   font-size: .6rem;
   background-color: white;
   width: 180px;
-  height: 35px;
+  height: 90px;
   padding: 5px;
 }
 
@@ -320,6 +320,10 @@ a:link{
     background-color: #39FF47;
   }
 
+  .about-wrapper{
+    background-color: white;
+  }
+
   .diary-wrapper{
     top: 55%;
     left: 50%;
@@ -328,7 +332,7 @@ a:link{
     height: 40%;
     background-color: white;
     padding: 10px;
-    font-size: .8rem;
+    font-size: .83rem;
     line-height: 1.5;
     overflow-y: auto;
     z-index: 2;
@@ -337,12 +341,12 @@ a:link{
   }
 
   .diaryImg{
-  position: relative;
-  height: 3.2rem;
-  margin-top: .2rem;
-  float: left;
-  margin-right: 5px; 
-}
+    position: relative;
+    height: 3.2rem;
+    margin-top: .2rem;
+    float: left;
+    margin-right: 5px; 
+  }
 
   .date-wrapper{
     position: absolute;
@@ -352,4 +356,9 @@ a:link{
     height: 60%;
     z-index: 2;
   }
+
+  .info{
+    font-size: .7rem;
+  }
+
 }
