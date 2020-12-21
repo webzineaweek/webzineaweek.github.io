@@ -7,10 +7,19 @@
   z-index: 1;
 }
 
+/*.interview-list::-webkit-scrollbar {
+  display: block;
+}
+
+.interview-list::-webkit-scrollbar-button {
+  display: block;
+}*/
+
 .interview-list{
   position: fixed;
   width: 280px;
   height: auto;
+  max-height: 400px;
   display: none;
   background-color: #D2ABFF;
   padding: 10px;
@@ -26,6 +35,8 @@
   overflow: scroll;
   cursor: move;
   box-shadow: 5px 7px 10px rgba(0,0,0,0.5);
+  -ms-overflow-style: block;
+  overflow: scroll;
 }
 
 .X{
