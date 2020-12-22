@@ -62,7 +62,7 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 iframe {
@@ -148,7 +148,7 @@ a:link{
   top: 0;
   left: 0;
   padding: 10px 15px;
-  font-size: .65rem;
+  font-size: .7rem;
   line-height: 1.4;
   z-index: 5;
 }
@@ -175,23 +175,29 @@ a:link{
 }
 
 .index-wrapper{
-  position: absolute;
+  position: fixed;
+  width: 40px;
+  bottom: 10px;
+  margin-left: 15px;
+  z-index: 5;
 }
 
 #icon{
-  width: 25px;
+  width: 30px;
   cursor: pointer;
 }
 
 .info{
+  position: fixed;
   display: none;
-  transform: translate(0, -30px);
-  margin-left: 35px;
+  bottom: 14px;
+  margin-left: 40px;
   font-size: .6rem;
   background-color: white;
   width: 180px;
   height: 100px;
   padding: 5px;
+  z-index: 5;
 }
 
 .diary-wrapper{
@@ -222,7 +228,7 @@ a:link{
 
 .title{
   text-align: center;
-  font-size: .65rem;
+  font-size: .7rem;
 }
 
 .diaryImg{
@@ -394,8 +400,32 @@ a:link{
     z-index: 2;
   }
 
+  .index-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 50px;
+  }
+
+  #icon{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
+  }
+
   .info{
+    position: fixed;
+    display: none;
+    top: 40px;
+    right: 10px !important;
     font-size: .7rem;
+    background-color: white;
+    width: 180px;
+    height: 100px;
+    padding: 5px;
   }
 
 }
