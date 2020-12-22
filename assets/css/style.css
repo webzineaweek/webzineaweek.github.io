@@ -8,14 +8,18 @@
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  -webkit-appearance: none;
+  width: 7px;
+  height: 7px;
 }
 
-::-webkit-scrollbar-button {
-  display: none;
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #D2ABFF;
 }
 
 body {
+  overflow-y: hidden;
   -ms-overflow-style:none;
 }
 
@@ -58,7 +62,7 @@ html {
 *,
 *::before,
 *::after {
-  /*  box-sizing: inherit;*/
+    box-sizing: inherit;
 }
 
 iframe {
@@ -116,8 +120,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
+  width: 180%;
+  height: 180%;
   word-break: keep-all;
   color: black;
   background-color: #39FF47;
@@ -161,7 +165,7 @@ a:link{
   top: 1.8rem;
   left: 110px;
   width: 240px;
-  height: 175px;
+  height: 210px;
   background-color: white;
   font-size: .7rem;
   overflow-y: hidden;
@@ -186,17 +190,19 @@ a:link{
   font-size: .6rem;
   background-color: white;
   width: 180px;
-  height: 90px;
+  height: 100px;
   padding: 5px;
 }
 
 .diary-wrapper{
+  overflow-y: hidden;
+  -ms-overflow-style:none;
   position: fixed;
   top: 10px;
   right: 15px;
   width: 45%;
   max-width: 320px;
-  height: 60%;
+  height: 96%;
   background-color: white;
   padding: 10px;
   font-size: .8rem;
@@ -204,6 +210,14 @@ a:link{
   overflow-y: auto;
   z-index: 2;
   box-shadow: 5px 7px 10px rgba(0,0,0,0.5);
+}
+
+.diary-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.diary-wrapper::-webkit-scrollbar-button {
+  display: none;
 }
 
 .title{
@@ -217,6 +231,15 @@ a:link{
   margin-top: .2rem;
   float: left;
   margin-right: 5px; 
+}
+
+.diaryImg2{
+  position: relative;
+  height: 5.5rem;
+  margin-top: .2rem;
+  float: right;
+  margin-right: 5px; 
+  margin-left: 2px;
 }
 
 .questions{
@@ -286,7 +309,7 @@ a:link{
   position: absolute;
   top:0;
   left: 0;
-  width: 60%;
+  width: 70%;
   height: 100%;
   z-index: 2;
 }
@@ -296,6 +319,7 @@ a:link{
   background-color: white;
   font-size: .65rem;
   cursor: pointer;
+  z-index: 2;
 }
 
 .date-wrapper ul li{
@@ -307,13 +331,26 @@ a:link{
   width: 30px;
 }
 
+.sticker-wrapper{
+  position: absolute;
+}
+
+.sticker{
+  position: absolute;
+  width: 20px;
+  z-index: 1;
+  box-shadow: 0px 3px 2px rgba(0,0,0,0.5);
+  cursor: pointer;
+
+}
+
 @media screen and (max-width:600px){
 
   body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 150%;
+    width: 200%;
     height: 100%;
     word-break: keep-all;
     color: black;
@@ -325,14 +362,14 @@ a:link{
   }
 
   .diary-wrapper{
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 90vw;
+    width: 96vw;
     height: 40%;
     background-color: white;
     padding: 10px;
-    font-size: .83rem;
+    font-size: .9rem;
     line-height: 1.5;
     overflow-y: auto;
     z-index: 2;
@@ -342,7 +379,7 @@ a:link{
 
   .diaryImg{
     position: relative;
-    height: 3.2rem;
+    height: 4.8rem;
     margin-top: .2rem;
     float: left;
     margin-right: 5px; 
