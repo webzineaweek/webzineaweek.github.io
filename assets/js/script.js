@@ -35,7 +35,7 @@ $(document).ready(function(){
 		}, 400);
 		if(index == 32){
 			setTimeout(function(){
-				$('.diary-wrapper').append('<br><img src="assets/img/clover.png" style="width: 19px"; height="auto"; margin-bottom:-10px;>');
+				$('.diary-wrapper').append('<br><a href="https://www.instagram.com/p/CIzacXUJLBL/?utm_source=ig_web_copy_link"><img id="clover" src="assets/img/clover.png" style="width: 19px"; height="auto";></a>');
 			}, 10);
 		}else{
 		};
@@ -47,6 +47,36 @@ $(document).ready(function(){
 			top : Math.random() * (($('.date-wrapper').height()))
 		});
 	});
+
+	$('.sticker-wrapper').each(function( ) {
+		$(this).css({
+			left : Math.random() * ($('.date-wrapper').width() - $(this).width()) + 5,
+			top : Math.random() * (($('.date-wrapper').height() -10) - $(this).height()) + 20
+		});
+	});
+
+	// $(function(){
+	// 	$('.sticker').hover(function(){
+	// 		$(this).css({
+	// 			'z-index': '5',
+	// 			'height': '110px',
+	// 			'bottom': '30px',
+	// 			'transform': 'translate(10%, 0)'
+	// 		});
+	// 		$('.sticker').not(this).css({
+	// 			'z-index': '4',
+	// 			'height': '40px',
+	// 			'bottom': '20px',
+	// 			'transform': 'translate(0, 0)'
+	// 		});
+	// 	},function(){
+	// 		$('.sticker').css({
+	// 			'height': '40px',
+	// 			'bottom': '20px',
+	// 			'transform': 'translate(0, 0)'
+	// 		});
+	// 	});
+	// });
 
 	var Nov12diary 	= [];
 	Nov12diary[0] 	= '<span class="questions" id="exhibitionmap">오늘 한 일 중 하나는 오랜 친구의 첫 개인전의 전시 지도를 만드는 일이다.</span> ';
@@ -84,7 +114,7 @@ $(document).ready(function(){
 	Nov17diary[0] 	= '<span>오늘은 진짜 많이 잤다. 꿈도 안 꾼 거 같다. 많이 잔 김에 낮잠도 잤다. 아예 밤을 새울 생각이다. </span>';
 	Nov17diary[1] 	= '<br><span>나세가 차를 태워줘서 민정과 같이 저녁을 먹고 두성집으로 갔다. 괴로운 노래 듣기 배틀이 벌어졌다. 나세는 음악을 오래 공부해서 징그러운 케이팝 듣기를 힘들어한다. </span>';	
 	Nov17diary[2] 	= '<span>우리는 숨듣명에 대해서 생각해봤다. 왜 숨을까? 왜 들을까? 왜 명곡일까? 일단 우리가 그 노래들의 가사를 다 알고 있었다는 점이 아이러니하다. </span>';	
-	Nov17diary[3] 	= '<span><br>작업은 생각보다 아주 많이 길어져서, 아침 수업까지 잠깐이라도 잘 시간이 없었다. 분명 2-3시간을 예상했는데 거의 10시간 넘게 마우스를 만지작거렸다. </span>';
+	Nov17diary[3] 	= '<span class="questions" id="thisWork"><br>작업은 생각보다 아주 많이 길어져서, 아침 수업까지 잠깐이라도 잘 시간이 없었다. 분명 2-3시간을 예상했는데 거의 10시간 넘게 마우스를 만지작거렸다. </span>';
 	Nov17diary[4] 	= '<span class="questions" id="work">물론 시간이 중요한 것은 아니고 마음에 들어야 하는데 그렇지가 않아서 좀 답답했다.</span> ';
 
 	var Nov18diary 	= [];
@@ -145,22 +175,53 @@ $(document).ready(function(){
 		index18++;
 		index18 < Nov17diary.length;
 		$('.diary-wrapper').append(Nov18diary[index18]);
+	});
 
+	$('.sticker-wrapper > img').click(function(){
+		$(this).hide();
+		$('.diary-wrapper').animate({scrollTop: 1000000});
+		$(this).replaceWith('<img class="boom" src="assets/img/boom.gif">');
+		setTimeout(function(){
+			$('.boom').hide();
+		}, 400);
+	});
+
+	$('#sticker1').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker1.jpeg"></span>');
+	});
+	$('#sticker3').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker3.jpeg"></span>');
+	});
+	$('#sticker4').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker4.jpeg"></span>');
+	});
+	$('#sticker5').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker5.jpeg"></span>');
+	});
+	$('#sticker7').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker6.jpeg"></span>');
+	});
+	$('#sticker8').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker8.jpeg"></span>');
 	});
 
 	$(document).on('click', function() {
-
 		if($('#snow').length){
 			$('#snowImg').show();
 		};
-
 	});
 
 	$(document).on('click', '#funnyfont', function() {
 		if($('body').css('font-family') != 'PusKul'){
 			$('body').css("font-family", "PusKul");
+			$('#funnyfont').css({
+				'font-weight' : 'normal',
+				'color' : '#39FF47'});
 		}else if($('body').css('font-family') == 'PusKul'){
 			$('body').css({'font-family': 'BlinkMacSystemFont, -apple-system, Arial, "Spoqa Han Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, sans-serif'});
+			$('#funnyfont').css({
+				'font-weight' : 'bold',
+				'color' : 'black'});
 		}else{
 		};	
 	});
@@ -230,55 +291,72 @@ $(document).ready(function(){
 		$('#interview-exhibitionmap').animate({scrollTop: 0});
 		$(this).attr('class', 'questions-visited');
 		$('#interview-exhibitionmap').show();
+		$('.interview-list').not('#interview-exhibitionmap').css('z-index', '9');
+		$('#interview-exhibitionmap').css('z-index', '10');
 	});
 
 	$(document).on('click', '#designGrammer', function() {
 		$('#interview-designGrammer').animate({scrollTop: 0});
 		$(this).attr('class', 'questions-visited');
 		$('#interview-designGrammer').show();
-		
+		$('.interview-list').not('#interview-designGrammer').css('z-index', '9');
+		$('#interview-designGrammer').css('z-index', '10');
 	});
 
 	$(document).on('click', '#record', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-record').show();
-		
+		$('.interview-list').not('#interview-record').css('z-index', '9');
+		$('#interview-record').css('z-index', '10');
 	});
 
 	$(document).on('click', '#volume', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-volume').show();
-		
+		$('.interview-list').not('#interview-volume').css('z-index', '9');
+		$('#interview-volume').css('z-index', '10');
 	});
 
 	$(document).on('click', '#name', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-name, #interview-instaName').show();
-		
+		$('.interview-list').not('#interview-name, #interview-instaName').css('z-index', '9');
+		$('#interview-name, #interview-instaName').css('z-index', '10');
 	});
 
 	$(document).on('click', '#work', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-work').show();
-		
+		$('.interview-list').not('#interview-work').css('z-index', '9');
+		$('#interview-work').css('z-index', '10');
 	});
 
 	$(document).on('click', '#newWork', function() {
 		$(this).attr('class', 'questions-visited');
-		$('#interview-thisSemesterWork, #interview-newwork').show();
-		
+		$('#interview-newwork').show();
+		$('.interview-list').not('#interview-newwork').css('z-index', '9');
+		$('#interview-newwork').css('z-index', '10');
+	});
+
+	$(document).on('click', '#thisWork', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-thisWork').show();
+		$('.interview-list').not('#interview-thisWork').css('z-index', '9');
+		$('#interview-thisWork').css('z-index', '10');
 	});
 
 	$(document).on('click', '#toy', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-toy').show();
-		
+		$('.interview-list').not('#interview-toy').css('z-index', '9');
+		$('#interview-toy').css('z-index', '10');
 	});
 
 	$(document).on('click', '#diary', function() {
 		$(this).attr('class', 'questions-visited');
 		$('#interview-diary').show();
-		
+		$('.interview-list').not('#interview-diary').css('z-index', '9');
+		$('#interview-diary').css('z-index', '10');
 	});
 
 	} else {
@@ -295,6 +373,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-exhibitionmap').css('z-index', '9');
+		$('#interview-exhibitionmap').css('z-index', '10');
 	});
 
 	$(document).on('click', '#designGrammer', function() {
@@ -305,6 +385,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-designGrammer').css('z-index', '9');
+		$('#interview-designGrammer').css('z-index', '10');
 	});
 
 	$(document).on('click', '#record', function() {
@@ -314,6 +396,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-record').css('z-index', '9');
+		$('#interview-record').css('z-index', '10');
 	});
 
 	$(document).on('click', '#volume', function() {
@@ -323,6 +407,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-volume').css('z-index', '9');
+		$('#interview-volume').css('z-index', '10');
 	});
 
 	$(document).on('click', '#name', function() {
@@ -336,6 +422,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-name, #interview-instaName').css('z-index', '9');
+		$('#interview-name, #interview-instaName').css('z-index', '10');
 	});
 
 	$(document).on('click', '#work', function() {
@@ -345,20 +433,30 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-work').css('z-index', '9');
+		$('#interview-work').css('z-index', '10');
 	});
 
 	$(document).on('click', '#newWork', function() {
 		$(this).attr('class', 'questions-visited');
-		$('#interview-thisSemesterWork, #interview-newwork').show();
-		$('#interview-thisSemesterWork').css({
-			left : Math.random() * ($('.interview-wrapper').width()),
-			top : Math.random() * ($('.interview-wrapper').height())
-		});
-
+		$('#interview-newwork').show();
 		$('#interview-newwork').css({
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-newwork').css('z-index', '9');
+		$('#interview-newwork').css('z-index', '10');
+	});
+
+	$(document).on('click', '#thisWork', function() {
+		$(this).attr('class', 'questions-visited');
+		$('#interview-thisWork').show();
+		$('#interview-thisWork').css({
+			left : Math.random() * ($('.interview-wrapper').width()),
+			top : Math.random() * ($('.interview-wrapper').height())
+		});
+		$('.interview-list').not('#interview-thisWork').css('z-index', '9');
+		$('#interview-thisWork').css('z-index', '10');		
 	});
 
 	$(document).on('click', '#toy', function() {
@@ -368,6 +466,8 @@ $(document).ready(function(){
 			left : Math.random() * ($('.interview-wrapper').width()),
 			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-toy').css('z-index', '9');
+		$('#interview-toy').css('z-index', '10');
 	});
 
 	$(document).on('click', '#diary', function() {
@@ -375,8 +475,10 @@ $(document).ready(function(){
 		$('#interview-diary').show();
 		$('#interview-diary').css({
 			left : Math.random() * ($('.interview-wrapper').width()),
-			top : 200
+			top : Math.random() * ($('.interview-wrapper').height())
 		});
+		$('.interview-list').not('#interview-diary').css('z-index', '9');
+		$('#interview-diary').css('z-index', '10');
 	});
 
   }
