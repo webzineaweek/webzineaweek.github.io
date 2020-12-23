@@ -196,7 +196,7 @@ a:link{
   background-color: white;
   width: 180px;
   height: 100px;
-  padding: 5px;
+  padding: 8px;
   z-index: 5;
 }
 
@@ -424,8 +424,8 @@ a:link{
     font-size: .7rem;
     background-color: white;
     width: 180px;
-    height: 100px;
-    padding: 10px;
+    height: 110px !important;
+    padding: 8px;
   }
 
 }
