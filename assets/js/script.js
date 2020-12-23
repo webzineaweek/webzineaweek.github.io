@@ -41,12 +41,12 @@ $(document).ready(function(){
 		};
 	});
 
-	$(function(){
-		$('.index-wrapper').css({
-			left : Math.random() * ($('.date-wrapper').width()) + 5,
-			top : Math.random() * (($('.date-wrapper').height()))
-		});
-	});
+	// $(function(){
+	// 	$('.index-wrapper').css({
+	// 		left : Math.random() * ($('.date-wrapper').width()) + 5,
+	// 		top : Math.random() * (($('.date-wrapper').height()))
+	// 	});
+	// });
 
 	$('.sticker-wrapper').each(function( ) {
 		$(this).css({
