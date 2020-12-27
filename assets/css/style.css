@@ -149,17 +149,17 @@ a:link{
   position: fixed;
   top: 0;
   left: 0;
-  width: 101vw;
-  height: 101vh;
+  width: 101vmax;
+  height: 101vmax;
   background-color: white;
   z-index: 999;
 }
 
 #preloader img{
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
-  width: 110%;
+  width: 110vmax;
   height: auto;
   transform: translate(-50%, -50%);
 }
@@ -339,13 +339,13 @@ a:link{
 }
 
 @keyframes blinka {
-  75% {
+  10% {
     opacity: 0;
   }
 
 }
 @-webkit-keyframes blinka {
-  75% {
+  10% {
     opacity: 0;
   }
 }
