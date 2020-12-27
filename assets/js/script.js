@@ -41,42 +41,12 @@ $(document).ready(function(){
 		};
 	});
 
-	// $(function(){
-	// 	$('.index-wrapper').css({
-	// 		left : Math.random() * ($('.date-wrapper').width()) + 5,
-	// 		top : Math.random() * (($('.date-wrapper').height()))
-	// 	});
-	// });
-
 	$('.sticker-wrapper').each(function( ) {
 		$(this).css({
 			left : Math.random() * ($('.date-wrapper').width() - $(this).width()) + 5,
 			top : Math.random() * (($('.date-wrapper').height() -10) - $(this).height()) + 20
 		});
 	});
-
-	// $(function(){
-	// 	$('.sticker').hover(function(){
-	// 		$(this).css({
-	// 			'z-index': '5',
-	// 			'height': '110px',
-	// 			'bottom': '30px',
-	// 			'transform': 'translate(10%, 0)'
-	// 		});
-	// 		$('.sticker').not(this).css({
-	// 			'z-index': '4',
-	// 			'height': '40px',
-	// 			'bottom': '20px',
-	// 			'transform': 'translate(0, 0)'
-	// 		});
-	// 	},function(){
-	// 		$('.sticker').css({
-	// 			'height': '40px',
-	// 			'bottom': '20px',
-	// 			'transform': 'translate(0, 0)'
-	// 		});
-	// 	});
-	// });
 
 	var Nov12diary 	= [];
 	Nov12diary[0] 	= '<span class="questions" id="exhibitionmap">오늘 한 일 중 하나는 오랜 친구의 첫 개인전의 전시 지도를 만드는 일이다.</span> ';
@@ -192,14 +162,14 @@ $(document).ready(function(){
 	$('#sticker3').click(function(){
 		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker3.jpeg"></span>');
 	});
-	$('#sticker4').click(function(){
-		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker4.jpeg"></span>');
-	});
 	$('#sticker5').click(function(){
 		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker5.jpeg"></span>');
 	});
-	$('#sticker7').click(function(){
+	$('#sticker6').click(function(){
 		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker6.jpeg"></span>');
+	});
+	$('#sticker7').click(function(){
+		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker7.jpeg"></span>');
 	});
 	$('#sticker8').click(function(){
 		$('.diary-wrapper').append('<span><img class="diaryImg2" src="assets/img/sticker/sticker8.jpeg"></span>');
@@ -284,24 +254,93 @@ $(document).ready(function(){
 		$(this).parent().hide();
 	});
 
+	$('.worklink').hover(function(){
+		$(this).attr('class', 'worklink-visited');
+		$('body').css('overflow-x', 'hidden');
+	}, function(){
+		$('body').css('overflow-x', 'scroll');
+	});
+
+	//**********hover and show work img
+
+	$('#swimsuit').hover(function(){
+		var topY = $('#swimsuit').offset().top;
+		var leftX = $('#swimsuit').offset().left;
+
+		$('#work-swimsuit').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-swimsuit').show();
+		$('.interview-list').not('#work-swimsuit').css('z-index', '9');
+		// $('#work-swimsuit').css('z-index', '10');
+	},function(){
+		$('#work-swimsuit').hide();
+	});
+
+	$('#swimsuit-xray').hover(function(){
+		var topY = $('#swimsuit-xray').offset().top;
+		var leftX = $('#swimsuit-xray').offset().left;
+
+		$('#work-swimsuit-xray').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-swimsuit-xray').show();
+		$('.interview-list').not('#work-swimsuit-xray').css('z-index', '9');
+		// $('#work-swimsuit-xray').css('z-index', '10');
+	},function(){
+		$('#work-swimsuit-xray').hide();
+	});
+
+	$('#map').hover(function(){
+		var topY = $('#map').offset().top;
+		var leftX = $('#map').offset().left;
+
+		$('#work-map').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-map').show();
+		$('.interview-list').not('#work-map').css('z-index', '9');
+		// $('#work-map').css('z-index', '10');
+	},function(){
+		$('#work-map').hide();
+	});
+
+	$('#calander').hover(function(){
+		var topY = $('#calander').offset().top;
+		var leftX = $('#calander').offset().left;
+
+		$('#work-calander').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-calander').show();
+		$('.interview-list').not('#work-calander').css('z-index', '9');
+		// $('#work-calander').css('z-index', '10');
+	},function(){
+		$('#work-calander').hide();
+	});
+
 // ************************mobile
 	function myFunction(x) {
 	if (x.matches) {
 		$(document).on('click', '#exhibitionmap', function() {
-		$('#interview-exhibitionmap').animate({scrollTop: 0});
-		$(this).attr('class', 'questions-visited');
-		$('#interview-exhibitionmap').show();
-		$('.interview-list').not('#interview-exhibitionmap').css('z-index', '9');
-		$('#interview-exhibitionmap').css('z-index', '10');
-	});
+			$('#interview-exhibitionmap').animate({scrollTop: 0});
+			$(this).attr('class', 'questions-visited');
+			$('#interview-exhibitionmap').show();
+			$('.interview-list').not('#interview-exhibitionmap').css('z-index', '9');
+			$('#interview-exhibitionmap').css('z-index', '10');
+		});
 
-	$(document).on('click', '#designGrammer', function() {
-		$('#interview-designGrammer').animate({scrollTop: 0});
-		$(this).attr('class', 'questions-visited');
-		$('#interview-designGrammer').show();
-		$('.interview-list').not('#interview-designGrammer').css('z-index', '9');
-		$('#interview-designGrammer').css('z-index', '10');
-	});
+		$(document).on('click', '#designGrammer', function() {
+			$('#interview-designGrammer').animate({scrollTop: 0});
+			$(this).attr('class', 'questions-visited');
+			$('#interview-designGrammer').show();
+			$('.interview-list').not('#interview-designGrammer').css('z-index', '9');
+			$('#interview-designGrammer').css('z-index', '10');
+		});
 
 	$(document).on('click', '#record', function() {
 		$(this).attr('class', 'questions-visited');
@@ -452,8 +491,8 @@ $(document).ready(function(){
 		$(this).attr('class', 'questions-visited');
 		$('#interview-thisWork').show();
 		$('#interview-thisWork').css({
-			left : Math.random() * ($('.interview-wrapper').width()),
-			top : Math.random() * ($('.interview-wrapper').height())
+			left : Math.random() * ($('.interview-wrapper').width()) - 60,
+			top : 25
 		});
 		$('.interview-list').not('#interview-thisWork').css('z-index', '9');
 		$('#interview-thisWork').css('z-index', '10');		
