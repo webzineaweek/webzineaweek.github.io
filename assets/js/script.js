@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(this).scrollTop(0, 0);
+	// $('body').scrollTop(0);
 
 	setTimeout(function() {
 		$('#loding5').css('background-color', '#39FF47');
@@ -359,7 +359,7 @@ $(document).ready(function(){
 
 		$('#work-calander').css({
 		'top' : topY + 12,
-		'left' : leftX
+		'left' : leftX - 10
 	});
 		$('#work-calander').show();
 		$('.interview-list').not('#work-calander').css('z-index', '9');

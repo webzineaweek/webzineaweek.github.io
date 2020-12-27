@@ -175,9 +175,10 @@ figcaption{
 .interview-list{
   font-size: 1rem;
   left: 50%;
-  width: 72%;
+  width: 68%;
   transform: translate(-50%, -40%);
   cursor: default;
+  max-height: 500px;
 }
 
 #interview-name{
@@ -196,6 +197,7 @@ figcaption{
   }
 
   #interview-thisWork, #interview-work{
+    width: 80%;
     top: 35%;
   }
     
