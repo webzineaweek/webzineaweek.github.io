@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar {
-/*  -webkit-appearance: none;*/
+  -webkit-appearance: none;
   width: 7px;
   height: 7px;
 }
@@ -19,7 +19,7 @@
 }
 
 body {
-/*  overflow-y: hidden;*/
+  overflow-y: hidden;
   -ms-overflow-style:none;
 }
 
@@ -57,7 +57,6 @@ textarea {
 
 html {
   box-sizing: border-box;
-  overflow-x: scroll;
 }
 
 *,
@@ -81,6 +80,7 @@ th:not([align]) {
 }
 
 html {
+  overflow: hidden;
   font-size: ;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
@@ -126,6 +126,7 @@ body {
   word-break: keep-all;
   color: black;
   background-color: #39FF47;
+  overflow: hidden;
 }
 
 a{
@@ -143,6 +144,42 @@ a:active{
 a:link{
   color: black;
 }
+
+#preloader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101vw;
+  height: 101vh;
+  background-color: white;
+  z-index: 999;
+}
+
+#preloader img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 98%;
+  transform: translate(-50%, -50%);
+}
+
+#preloader ul{
+  width: 100%;
+  height: 100%;
+}
+
+#preloader ul li{
+  width: 100%;
+  height: 20%;
+}
+
+
+
+.main{
+  visibility: hidden;
+}
+
 
 .manu-wrapper{
   position: fixed;
@@ -320,8 +357,7 @@ a:link{
 }
 
 #blackStar{
-  font-weight: ;
-  cursor: pointer;0;
+  cursor: pointer;
 }
 
 #starImg{
@@ -453,7 +489,7 @@ a:link{
     font-size: .7rem;
     line-height: 1.4;
     background-color: white;
-    width: 180px;
+    width: 190px;
     height: 120px;
     padding: 10px;
   }

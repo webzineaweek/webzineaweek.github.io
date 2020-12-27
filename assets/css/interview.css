@@ -7,17 +7,17 @@
   z-index: 1;
 }
 
-/*.interview-list::-webkit-scrollbar {
-  display: block;
+.interview-list::-webkit-scrollbar {
+  display: none;
 }
 
 .interview-list::-webkit-scrollbar-button {
-  display: block;
-}*/
+  display: none;
+}
 
 .work-list{
   float: left;
-/*  -ms-overflow-style:none;*/
+  -ms-overflow-style:none;
   position: absolute;
   width: 190px;
   height: auto;
@@ -26,7 +26,7 @@
   font-family: monospace;
   z-index: 9;
   word-spacing: -0.2rem;
-/*  -ms-overflow-style: block;*/
+  -ms-overflow-style: block;
 }
 
 .work-list img{
@@ -37,12 +37,12 @@
 }
 
 .interview-list{
-/*  -ms-overflow-style:none;*/
+  -ms-overflow-style:none;
   position: fixed;
   width: 280px;
   height: auto;
   top:40%;
-  max-height: 450px;
+  max-height: 480px;
   display: none;
   background-color: #D2ABFF;
   padding: 15px;
@@ -109,7 +109,7 @@
 }
 
 #interview-work, #interview-thisWork{
-  width: 350px;
+  width: 320px;
 }
 
 figcaption{
@@ -176,24 +176,26 @@ figcaption{
   font-size: 1rem;
   left: 50%;
   width: 70%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   cursor: default;
 }
 
-#interview-work, #interview-thisWork{
-  width: 80%;
-  height: 80%;
-}
-
 #interview-name{
-    width: 37%;
-    left: 7%;
-    transform: translate(0%, -50%);
+    width: 64%;
+    left: 10%;
+    top: 10%;
+    transform: translate(0%, 0%);
   }
 
   #interview-instaName{
-    width: 37%;
-    left: 53%;
-    transform: translate(0%, -50%);
+    width: 64%;
+    left: 20%;
+    top: 15%;
+    transform: translate(0%, 0%);
   }
+
+  #interview-thisWork, #interview-work{
+    top: 35%;
+  }
+    
 }

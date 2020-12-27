@@ -1,5 +1,46 @@
 $(document).ready(function(){
 
+	setTimeout(function() {
+		$('#loding5').css('background-color', '#39FF47');
+	}, 400);
+
+	setTimeout(function() {
+		$('#loding4').css('background-color', '#39FF47');
+	}, 900);
+
+	setTimeout(function() {
+		$('#loding3').css('background-color', '#39FF47');
+	}, 1400);
+
+	setTimeout(function() {
+		$('#loding2').css('background-color', '#39FF47');
+	}, 1900);
+
+	setTimeout(function() {
+		$('#loding1').css('background-color', '#39FF47');
+	}, 2400);
+
+	setTimeout(function() {
+		$('#preloader').hide();
+	}, 2700);
+
+	setTimeout(function() {
+		$('#preloader').show();
+	}, 3000);
+
+	setTimeout(function() {
+		$('#preloader').hide();
+		$('body').css('background-color', '#39FF47');
+		$('html').css({
+			'overflow-x': 'scroll',
+			'overflow-y': 'hidden'
+		});
+		$('.main').css('visibility', 'visible');
+
+	}, 3500);
+
+	
+
 	$('.index-wrapper').hover(function( ) {
 		$('.info').show();
 	},function(){
@@ -187,11 +228,13 @@ $(document).ready(function(){
 			$('#funnyfont').css({
 				'font-weight' : 'normal',
 				'color' : '#39FF47'});
+			$('.info').css("width", "200px");
 		}else if($('body').css('font-family') == 'PusKul'){
 			$('body').css({'font-family': 'BlinkMacSystemFont, -apple-system, Arial, "Spoqa Han Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, sans-serif'});
 			$('#funnyfont').css({
 				'font-weight' : 'bold',
 				'color' : 'black'});
+			$('.info').css("width", "190px");
 		}else{
 		};	
 	});
@@ -321,6 +364,51 @@ $(document).ready(function(){
 		// $('#work-calander').css('z-index', '10');
 	},function(){
 		$('#work-calander').hide();
+	});
+
+	$('#hanriver').hover(function(){
+		var topY = $('#hanriver').offset().top;
+		var leftX = $('#hanriver').offset().left;
+
+		$('#work-hanriver').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-hanriver').show();
+		$('.interview-list').not('#work-hanriver').css('z-index', '9');
+		// $('#work-calander').css('z-index', '10');
+	},function(){
+		$('#work-hanriver').hide();
+	});
+
+	$('#hyunsoomak').hover(function(){
+		var topY = $('#hyunsoomak').offset().top;
+		var leftX = $('#hyunsoomak').offset().left;
+
+		$('#work-hyunsoomak').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-hyunsoomak').show();
+		$('.interview-list').not('#work-hyunsoomak').css('z-index', '9');
+		// $('#work-calander').css('z-index', '10');
+	},function(){
+		$('#work-hyunsoomak').hide();
+	});
+
+	$('#drawing').hover(function(){
+		var topY = $('#drawing').offset().top;
+		var leftX = $('#drawing').offset().left;
+
+		$('#work-drawing').css({
+		'top' : topY + 12,
+		'left' : leftX
+	});
+		$('#work-drawing').show();
+		$('.interview-list').not('#work-drawing').css('z-index', '9');
+		// $('#work-calander').css('z-index', '10');
+	},function(){
+		$('#work-drawing').hide();
 	});
 
 // ************************mobile
@@ -469,8 +557,8 @@ $(document).ready(function(){
 		$(this).attr('class', 'questions-visited');
 		$('#interview-work').show();
 		$('#interview-work').css({
-			left : Math.random() * ($('.interview-wrapper').width()),
-			top : Math.random() * ($('.interview-wrapper').height())
+			left : Math.random() * ($('.interview-wrapper').width()) - 60,
+			top : 30
 		});
 		$('.interview-list').not('#interview-work').css('z-index', '9');
 		$('#interview-work').css('z-index', '10');
