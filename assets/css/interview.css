@@ -175,7 +175,7 @@ figcaption{
 .interview-list{
   font-size: 1rem;
   left: 50%;
-  width: 70%;
+  width: 72%;
   transform: translate(-50%, -40%);
   cursor: default;
 }
@@ -185,12 +185,13 @@ figcaption{
     left: 10%;
     top: 10%;
     transform: translate(0%, 0%);
+    z-index: 11;
   }
 
   #interview-instaName{
-    width: 64%;
-    left: 20%;
-    top: 15%;
+    width: 65%;
+    left: 22%;
+    top: 16%;
     transform: translate(0%, 0%);
   }
 

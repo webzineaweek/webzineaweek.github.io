@@ -175,6 +175,10 @@ a:link{
 }
 
 @media screen and (max-width: 600px){
+  #preloader{
+  width: 101vw;
+  height: 100%;
+}
   #preloader img{
   width: 100%;
   height: auto;
