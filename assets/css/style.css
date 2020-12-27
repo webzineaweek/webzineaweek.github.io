@@ -180,6 +180,7 @@ a:link{
   height: 100%;
 }
   #preloader img{
+  width: auto;
   height: 120%;
   top: 48%
 }
