@@ -157,7 +157,7 @@ a:link{
 
 #preloader img{
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 50%;
   width: 110vmax;
   height: auto;
@@ -328,26 +328,17 @@ a:link{
   cursor: help;
 /*  background-color: #39FF47;*/
   animation: blink 1s infinite;
-  -webkit-animation: blinka 1s infinite;
   color: #39FF47;
+  font-weight: bold;
+  word-spacing: -.35rem;
 }
 
 .worklink-visited{
   cursor: help;
-  background-color: #D2ABFF;
+/*  background-color: #D2ABFF;*/
   color: #39FF47;
-}
-
-@keyframes blinka {
-  10% {
-    opacity: 0;
-  }
-
-}
-@-webkit-keyframes blinka {
-  10% {
-    opacity: 0;
-  }
+  font-weight: bold;
+  word-spacing: -.35rem;
 }
 
 #funnyfont{

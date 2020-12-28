@@ -4,31 +4,31 @@ $(document).ready(function(){
 
 	setTimeout(function() {
 		$('#loding5').css('background-color', '#39FF47');
-	}, 400);
+	}, 1000);
 
 	setTimeout(function() {
 		$('#loding4').css('background-color', '#39FF47');
-	}, 900);
+	}, 1500);
 
 	setTimeout(function() {
 		$('#loding3').css('background-color', '#39FF47');
-	}, 1400);
+	}, 2000);
 
 	setTimeout(function() {
 		$('#loding2').css('background-color', '#39FF47');
-	}, 1900);
+	}, 2500);
 
 	setTimeout(function() {
 		$('#loding1').css('background-color', '#39FF47');
-	}, 2400);
+	}, 3000);
 
 	setTimeout(function() {
 		$('#preloader').hide();
-	}, 2700);
+	}, 3600);
 
 	setTimeout(function() {
 		$('#preloader').show();
-	}, 3000);
+	}, 3800);
 
 	setTimeout(function() {
 		$('#preloader').hide();
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		});
 		$('.main').css('visibility', 'visible');
 
-	}, 3500);
+	}, 4400);
 
 	
 
@@ -299,106 +299,109 @@ $(document).ready(function(){
 		$(this).parent().hide();
 	});
 
-	$('.worklink').hover(function(){
+	$('.worklink').click(function(){
 		$(this).attr('class', 'worklink-visited');
 		$('body').css('overflow-x', 'hidden');
-	}, function(){
-		$('body').css('overflow-x', 'scroll');
+		event.stopPropagation();
+		$('body').click(function(){
+			$('.work-list').hide();
+		})
 	});
 
 	//**********hover and show work img
 
-	$('#swimsuit').hover(function(){
+
+	$('#swimsuit').click(function(){
 		var topY = $('#swimsuit').offset().top;
 		var leftX = $('#swimsuit').offset().left;
 
 		$('#work-swimsuit').css({
-		'top' : topY + 12,
+		'top' : topY + 35,
 		'left' : leftX
 	});
-		$('#work-swimsuit').show();
+		$('.work-list').not('#work-swimsuit').hide();
+		$('#work-swimsuit').toggle();
 		$('.interview-list').not('#work-swimsuit').css('z-index', '9');
 		// $('#work-swimsuit').css('z-index', '10');
-	},function(){
-		$('#work-swimsuit').hide();
+
+		if($('#work-swimsuit').length){
+			$('body').click(function(){
+				$('#work-swimsuit').hide();
+			});
+		};
 	});
 
-	$('#swimsuit-xray').hover(function(){
+	$('#swimsuit-xray').click(function(){
 		var topY = $('#swimsuit-xray').offset().top;
 		var leftX = $('#swimsuit-xray').offset().left;
 
 		$('#work-swimsuit-xray').css({
-		'top' : topY + 12,
+		'top' : topY + 35,
 		'left' : leftX
 	});
-		$('#work-swimsuit-xray').show();
+		$('.work-list').not('#work-xray').hide();
+		$('#work-swimsuit-xray').toggle();
 		$('.interview-list').not('#work-swimsuit-xray').css('z-index', '9');
 		// $('#work-swimsuit-xray').css('z-index', '10');
-	},function(){
-		$('#work-swimsuit-xray').hide();
 	});
 
-	$('#map').hover(function(){
+	$('#map').click(function(){
 		var topY = $('#map').offset().top;
 		var leftX = $('#map').offset().left;
 
 		$('#work-map').css({
-		'top' : topY + 12,
+		'top' : topY + 35,
 		'left' : leftX
 	});
-		$('#work-map').show();
+		$('.work-list').not('#work-map').hide();
+		$('#work-map').toggle();
 		$('.interview-list').not('#work-map').css('z-index', '9');
 		// $('#work-map').css('z-index', '10');
-	},function(){
-		$('#work-map').hide();
 	});
 
-	$('#calander').hover(function(){
+	$('#calander').click(function(){
 		var topY = $('#calander').offset().top;
 		var leftX = $('#calander').offset().left;
 
 		$('#work-calander').css({
-		'top' : topY + 12,
-		'left' : leftX - 10
+		'top' : topY + 35,
+		'left' : leftX
 	});
-		$('#work-calander').show();
+		$('.work-list').not('#work-calander').hide();
+		$('#work-calander').toggle();
 		$('.interview-list').not('#work-calander').css('z-index', '9');
 		// $('#work-calander').css('z-index', '10');
-	},function(){
-		$('#work-calander').hide();
 	});
 
-	$('#hanriver').hover(function(){
+	$('#hanriver').click(function(){
 		var topY = $('#hanriver').offset().top;
 		var leftX = $('#hanriver').offset().left;
 
 		$('#work-hanriver').css({
-		'top' : topY + 12,
+		'top' : topY + 30,
 		'left' : leftX
 	});
-		$('#work-hanriver').show();
+		$('.work-list').not('#work-hanriver').hide();
+		$('#work-hanriver').toggle();
 		$('.interview-list').not('#work-hanriver').css('z-index', '9');
 		// $('#work-calander').css('z-index', '10');
-	},function(){
-		$('#work-hanriver').hide();
 	});
 
-	$('#hyunsoomak').hover(function(){
+	$('#hyunsoomak').click(function(){
 		var topY = $('#hyunsoomak').offset().top;
 		var leftX = $('#hyunsoomak').offset().left;
 
 		$('#work-hyunsoomak').css({
-		'top' : topY + 12,
-		'left' : leftX
+		'top' : topY,
+		'left' : leftX - 125
 	});
-		$('#work-hyunsoomak').show();
+		$('.work-list').not('#work-hyunsoomak').hide();
+		$('#work-hyunsoomak').toggle();
 		$('.interview-list').not('#work-hyunsoomak').css('z-index', '9');
 		// $('#work-calander').css('z-index', '10');
-	},function(){
-		$('#work-hyunsoomak').hide();
 	});
 
-	$('#drawing').hover(function(){
+	$('#drawing').click(function(){
 		var topY = $('#drawing').offset().top;
 		var leftX = $('#drawing').offset().left;
 
@@ -406,11 +409,15 @@ $(document).ready(function(){
 		'top' : topY + 12,
 		'left' : leftX
 	});
-		$('#work-drawing').show();
+		$('.work-list').not('#work-drawing').hide();
+		$('#work-drawing').toggle();
 		$('.interview-list').not('#work-drawing').css('z-index', '9');
 		// $('#work-calander').css('z-index', '10');
-	},function(){
-		$('#work-drawing').hide();
+
+		$(document).on('click', function() {
+			$('#work-list').hide();
+		});
+
 	});
 
 // ************************mobile
