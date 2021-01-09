@@ -93,7 +93,7 @@
 .interview-title{
   position: absolute;
   top: 7px;
-  left: 0; 
+  left: 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px dotted black;
@@ -175,10 +175,10 @@ figcaption{
 .interview-list{
   font-size: 1rem;
   left: 50%;
-  width: 68%;
+  width: 69%;
   transform: translate(-50%, -40%);
   cursor: default;
-  max-height: 500px;
+  max-height: 80%;
 }
 
 #interview-name{
@@ -198,7 +198,7 @@ figcaption{
 
   #interview-thisWork, #interview-work{
     width: 80%;
-    top: 35%;
+    top: 40%;
   }
-    
+
 }

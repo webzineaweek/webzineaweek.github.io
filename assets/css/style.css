@@ -150,14 +150,14 @@ a:link{
   top: 0;
   left: 0;
   width: 101vmax;
-  height: 101vmax;
+  height: 100%;
   background-color: white;
   z-index: 999;
 }
 
 #preloader img{
   position: absolute;
-  top: 38%;
+  top: 45%;
   left: 50%;
   width: 110vmax;
   height: auto;
@@ -171,7 +171,7 @@ a:link{
 
 #preloader ul li{
   width: 100%;
-  height: 20%;
+  height: calc(100% / 6);
 }
 
 @media screen and (max-width: 600px){
@@ -288,7 +288,7 @@ a:link{
   height: 6.8rem;
   margin-top: .2rem;
   float: left;
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .diaryImg2{
@@ -296,7 +296,7 @@ a:link{
   height: 5.5rem;
   margin-top: .2rem;
   float: right;
-  margin-right: 5px; 
+  margin-right: 5px;
   margin-left: 2px;
 }
 
@@ -384,7 +384,7 @@ a:link{
   top:0;
   left: 0;
   width: 70%;
-  height: 100%;
+  height: 96%;
   z-index: 2;
 }
 
@@ -456,14 +456,14 @@ a:link{
     height: 4.8rem;
     margin-top: .2rem;
     float: left;
-    margin-right: 5px; 
+    margin-right: 5px;
   }
 
   .date-wrapper{
     position: absolute;
     top:0;
     left: 0;
-    width: 100%;
+    width: 96%;
     height: 50%;
     z-index: 2;
   }
