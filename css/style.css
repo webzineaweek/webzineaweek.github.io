@@ -80,7 +80,7 @@ th:not([align]) {
 }
 
 html {
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: ;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
@@ -126,7 +126,6 @@ body {
   word-break: keep-all;
   color: black;
   background-color: #39FF47;
-  overflow: hidden;
 }
 
 a{
@@ -419,6 +418,9 @@ a:link{
 }
 
 @media screen and (max-width:600px){
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   body {
     position: absolute;
@@ -429,6 +431,7 @@ a:link{
     word-break: keep-all;
     color: black;
     background-color: #39FF47;
+    overflow-x: scroll;
   }
 
   .about-wrapper{
