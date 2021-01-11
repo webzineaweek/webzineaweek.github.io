@@ -126,7 +126,8 @@ body {
   word-break: keep-all;
   color: black;
   background-color: #39FF47;
-  overflow: hidden;
+  overflow-y: hidden;
+  -ms-overflow-style:none;
 }
 
 a{
@@ -149,19 +150,39 @@ a:link{
   position: fixed;
   top: 0;
   left: 0;
-  width: 101vmax;
+  width: 100%;
   height: 100%;
   background-color: white;
   z-index: 999;
+  cursor: pointer;
 }
 
 #preloader img{
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
-  width: 110vmax;
-  height: auto;
+  width: auto;
+  height: 100%;
   transform: translate(-50%, -50%);
+}
+
+#cover-img{
+
+}
+
+#mobile-cover-img{
+  display: none;
+}
+
+#pre-title{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  font-size: .7rem;
+  line-height: 1.4;
+  z-index: 5;
+  text-shadow: 2px 3px 2px rgba(0,0,0,0.6);
 }
 
 #preloader ul{
@@ -174,19 +195,32 @@ a:link{
   height: calc(100% / 6);
 }
 
+.pre-squere{
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  z-index: 999;
+}
+
 @media screen and (max-width: 600px){
-  #preloader{
-  width: 101vw;
-  height: 100%;
-}
   #preloader img{
-  width: auto;
-  height: 120%;
-  top: 48%
-}
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
+#cover-img{
+  display: none;
+}
 
+#mobile-cover-img{
+  display: block;
+}
+}
 
 .main{
   visibility: hidden;
@@ -419,6 +453,9 @@ a:link{
 }
 
 @media screen and (max-width:600px){
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   body {
     position: absolute;
@@ -429,6 +466,7 @@ a:link{
     word-break: keep-all;
     color: black;
     background-color: #39FF47;
+    overflow-x: scroll;
   }
 
   .about-wrapper{

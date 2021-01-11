@@ -40,6 +40,26 @@
   margin: auto 0;
 }
 
+#work-map{
+  max-width: 290px !important;
+}
+
+#work-calander{
+  max-width: 305px !important;
+}
+
+#work-hanriver{
+  max-width: 290px !important;
+}
+
+#work-hyunsoomak{
+  max-width: 340px !important;
+}
+
+#work-drawing{
+  max-width: 190px !important;
+}
+
 .interview-list{
   -ms-overflow-style:none;
   position: fixed;
@@ -205,13 +225,29 @@ figcaption{
     top: 43%;
   }
 
-  #work-map, #work-calander, #work-hanriver, #work-hyunsoomak, #work-drawing{
+  #work-map{
     max-width: none !important;
+    width: 85vw !important;
   }
 
-  #work-map img, #work-calander img, #work-hanriver img, #work-hyunsoomak img, #work-drawing img{
-    width: 70vw;
-    height: auto;
+  #work-calander{
+    max-width: none !important;
+    width: 85vw !important;
+  }
+
+  #work-hanriver{
+    max-width: none !important;
+    width: 85vw !important;
+  }
+
+  #work-hyunsoomak{
+    max-width: none !important;
+    width: 90vw !important;
+  }
+
+  #work-drawing{
+    max-width: none !important;
+    width: 54vw !important;
   }
 
 }
