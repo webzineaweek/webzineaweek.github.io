@@ -1,7 +1,6 @@
 $(document).ready(function(){
-
-	// $('body').scrollTop(0);
-	setTimeout(function() {
+	$('#preloader').click(function(){
+		setTimeout(function() {
 		$('#loding6').css('background-color', '#39FF47');
 	}, 1000);
 
@@ -37,14 +36,14 @@ $(document).ready(function(){
 		$('#preloader').hide();
 		$('body').css('background-color', '#39FF47');
 		$('html').css({
-			'overflow-x': 'scroll',
-			'overflow-y': 'hidden'
+			'overflow-y': 'scroll',
+			'overflow-x': 'scroll'
 		});
 		$('.main').css('visibility', 'visible');
 
 	}, 4900);
-
-
+	});
+	// $('body').scrollTop(0);
 
 	$('.index-wrapper').hover(function( ) {
 		$('.info').show();
