@@ -37,8 +37,8 @@ $(document).ready(function(){
 		$('#preloader').hide();
 		$('body').css('background-color', '#39FF47');
 		$('html').css({
-			'overflow-x': 'scroll',
-			'overflow-y': 'hidden'
+			'overflow-y': 'scroll',
+			'overflow-x': 'scroll'
 		});
 		$('.main').css('visibility', 'visible');
 
@@ -354,7 +354,6 @@ $(document).ready(function(){
 		$('.work-list').not('#work-drawing').hide();
 		$('#work-drawing').toggle();
 		$('.interview-list').not('#work-drawing').css('z-index', '9');
-		});
 
 	});
 
